@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <!-- HEAD -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Detavius Niblack</title>
+        <link rel="stylesheet" type="text/css" href="css/portfoliostyle.css">
+    </head>
+    
+    <!-- BODY -->
+    <body class="Background">
+
+    <!-- NAVBAR -->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <!-- Onclick and anddbclick functions added to open and clsoe the contact form  -->
+        <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+    </div>
+
+    <!-- BACKGROUND VIDEO -->
+    <div id="Home">
+        <video autoplay muted loop id="header-video">
+            <source src="videos/production ID_4884233.mp4" type="video/mp4">
+            <!-- incase the browser can't display the video -->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- VIDEO TEXT -->
+    <div class="Video-Text">
+        <h1 class="white-text">Detavius Niblack's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>The computer programmer is a creator of universes for which he alone is the lawgiver. 
+                    <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+                    <br>field of battle and to command such unswervingly dutiful actors or troops.
+                </q>
+                <br> 
+                <br> -Joseph Weizenbaum
+                <br>
+                <br>
+                <br>My name is Detavius Niblack. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                <br>
+                <br>Thank you for stopping by and I hope you enjoy!
+            </p>
+        </strong>
+    </div>
+
+    <!-- SLIDESHOW -->
+    <div id="Slideshow">
+        <div id="SlideshowBG">
+            <div id="Slideshow-Container">
+                <!-- Slide 1 of 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Img" src="images/profile-picture-Square.jpg">
+                    <div class="text">I'm available to assist you on any current or future projects!</div>
+                </div>
+                <!-- Slide 2 of 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Img" src="images/The_Tech_Academy_Logo.jpeg">
+                    <div class="text">I'm a developer in training laerning & studying UI/UX at <a class="white-text" href="learncodinganywhere.com">The Tech Academy</a></div>
+                </div>
+                <!-- Slide 3 of 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Img" src="images/html-css-javascript-logo-png-transparent.png">
+                    <div class="text">I am currently studying HTML, CSS, JavaScript,<br> Database, and SQL</div>
+                </div>
+                <!-- Slide 4 of 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Img" src="images/contact.jpg">
+                    <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Let's get in touch!</a></div>
+                </div>
+                <!-- Previous & Next Buttons -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+<!-- Slideshow dots so that the user viewing the page has another way to novaigate through the slideshow-->
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+    <!-- END SLIDESHOW -->
+
+    <!-- ABOUT -->
+    <div class="Row" id="About">
+        <!-- LEFT COLUMN -->
+        <div class="Column-2">
+            <img src="images/mark-zuravski-y8F273nUCdM-unsplash.jpg" alt="*replace with photo description*">
+        </div>
+    <!-- RIGHT COLUMN -->
+        <div class="Column-1">
+            <h1>About</h1>
+            <p>
+                I'm a software developer who loves to code! I'm also a visual artist who works primarily through photography and cinematography.
+                <br>
+                <br>I am currently enrolled in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Achademy's</a> Software Developer Boot Camp, training in the UI/UX course where I am learning HTML, CSS, JavaScript, and more.
+                <br>
+                <br>I am learning to become a full-stack developer and would love to work with you on your current or future projects. Feel free to <a href="#Contact">contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+        <!-- GITHUB SECTION -->
+        <div class="Row" id="GitHub">
+
+        <!-- LEFT GIT COLUMN -->
+            <div class="Column-1">
+                <h1>GitHub</h1>
+                <p class="center_left">
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/dniblack" target="_blank">Detavius Niblack GitHub</a></p>
+            </div>
+        <!-- RIGHT GIT COLUMN -->
+            <div class="Column-2">
+                <a href="https://github.com/dniblack" target="_blank"><img src="images/GitHub_Logo.png" alt="GitHub logo"></a>
+                <!-- <a href="https://github.com/dniblack" target="_blank"><img src="./images/GitHub-Logo.png" alt="Alternate GitHub logo"></a> -->
+            </div>
+        </div>
+            <!-- CONTACT SECTION -->
+            <div id="Contact">
+                <button onclick="openForm()" class="PopUpButton">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mvodbeke" method="POST" class="form-container"><!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                   <h1>Contact</h1>
+                   <label for="name"><b>Name</b></label>
+                     <input type="text" placeholder="Fill out your name here" name="name" required>
+                   <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Fill out your phone number here" name="phone">
+                   <label for="email"><b>Email</b></label>
+                     <input type="text" placeholder="Fill out your email here" name="email" required>
+                   <label for="message"><b>Message</b></label>
+                     <input type="text" placeholder="Fill out your message here" name="message" required>
+
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>
+                <p class="center_footer">&copy; 2021 DN | &copy; 2021 Detavius Niblack <a href="https://github.com/dniblack" target="_blank">GitHub</a></p>
+                <br>
+            </p>
+        </footer>
+        <script src="JS/My_Portfolio_JavaScript.js"></script>
+    </body>
+</html>
