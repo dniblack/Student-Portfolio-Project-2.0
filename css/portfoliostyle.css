@@ -9,11 +9,12 @@ body {
     opacity: 1; /* This and transition affect the page loading fade in effect */
     transition: 3s opacity; /* This causes a 3 second fade in  */
     letter-spacing: .2vw; /* Spaces the lettering .2% of the viewport width; */
-    font-family: Questvrial, Libre Baskerville, sans-serif;
+    font-family: 'Source Sans Pro', Questvrial, Libre Baskerville, sans-serif;
     color: #577366;
     font-size: 1.5vw;
     overflow-x: hidden; /* This prevents the horizontal scroll bar from appearing when the quote is hovered over */
     user-select: none; /* This prevents the text on the webapge from being highlighted by the user */
+    background-color: #F6FBF6;
 }
 
 /* This section contributes to the fade effect that occurs once the page has loaded */
@@ -21,22 +22,55 @@ body.fade-out {
     opacity: .1; /* This sets the level of opacity at the start of page load */
 }
 
+/* This section is for the container classes, ensureing all the text is centered*/
+.container p, h1, a {
+    text-align: center;
+}
+
+.container {
+    background-color: #F6FBF6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.full-row {
+    background-color: #F6FBF6;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.col img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
 /* Heading Elements */
 h1 {
     text-transform: uppercase; /* text-transforms is in charge of the capatalizing of text*/
     font-family: Raleway, Montserrat, Opens Sans, PT Sans, sans-serif; /* sets font family for all h1 headings */
-    font-weight: 800;
+    font-weight: bold;
     text-align: center; /* Centers all h1 heading elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
     color: #577366;
 }
 
-/* Heading 1 element hover effect */
+/* Heading 1 element hover effect */ 
 h1:hover {
     filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
-    transform: scale(1.05); /* When the h1 elements are hovered over they increase in size by 1.1 */
+    transform: scale(1); /* When the h1 elements are hovered over they increase in size by 1.1 */
     transition: transform 1.5s; /* This causes the transiformation to last 1 second */
     transition-timing-function: ease-in-out; /* ensures the transition both in and out is smooth rather than linear */
+}
+
+/* Card Elements */
+
+.card-group img {
+    background-color: none;
+    border: none;
 }
 
 /* Styling for Portfolio Title Text */
@@ -56,8 +90,8 @@ p {
 }
 
 p:hover {
-    transition: transform 1.5s; /* This makes the transform effect last 1.5 seconds */
-    transform: scale(1.05); /* This makes the paragraph increase slightly in size when hovered over */
+    transition: transform 0s; /* This makes the transform effect last 1.5 seconds */
+    transform: scale(1); /* This makes the paragraph increase slightly in size when hovered over */
     transition-timing-function: ease-in-out;
 }
 
@@ -83,7 +117,7 @@ p:hover {
 
 .center:hover {
     transition: transform 2.5s; /* This makes the transform effect last 2 seconds */
-    transform: scale(1.05); /* This ensures all the elements with class "center" increase in size by 1.1 when hovered over */
+    transform: scale(1); /* This ensures all the elements with class "center" increase in size by 1.1 when hovered over */
     transition-timing-function: ease-in-out;
 }
 /* Anchor Elements */
@@ -171,8 +205,8 @@ footer {
 
 /* moveNav aniamtion effect for moving the navbar in from the left of the screen */
 @keyframes moveNav {
-    from {left: -100vw} /* The navbar is starting off screen to the left */
-    to {left: 0vw;} /* This movse the navbar into place on the screen */
+    from {top: -100vw} /* The navbar is starting off screen to the left */
+    to {bottom: 0vw;} /* This movse the navbar into place on the screen */
 }
 
 /* Mavbar links */
@@ -182,8 +216,8 @@ footer {
     color: #F6FBF6; /* This is the font color for text on our navbar */
     padding: .75vw 1vw; /* TThis adds padding around our text */
     text-decoration: none; /* This gets rid of the underines under the text on our navbar */
-    font-family: Raleway, Lato, Helvetica, sans-serif; /* This specifies the font famile for the text of the navbar */
-    font-weight: 800;
+    font-family: 'Source Sans Pro', Lato, Helvetica, sans-serif; /* This specifies the font famile for the text of the navbar */
+    font-weight: 200;
     font-size: 1.5vw; /* This specifies the font size for text on our navbar */
     text-align: center; /* This centers the text within the container */
     position: relative; /* This sets the text relative to tis normal positioning, allowing us to use the animation below */
@@ -222,7 +256,7 @@ footer {
 /* This is the formatting section for the background video */
 
 #header-video {
-    position: fixed; /* This fixes the video to the page */
+    position: absolute; /* This fixes the video to the page */
     right: 0%; /* This ensures there is no space between the edge of the video and the edge of the page */
     bottom: 0%; /* This ensures no space between the bottom fo the video and the bottom fo the page */
     min-width: 100%; /* This ensures the video is displayed across the ful; width of the page */
@@ -383,6 +417,30 @@ footer {
     padding: 1.6%;
     height: 450px;
     background-color: #6B9080;
+}
+
+.Column-3 {
+    float: left;
+    width: 100%;
+    padding: 1.5%;
+    height: auto;
+    background-color: #F6FBF6;
+}
+
+.card-body p, h1 {
+    text-align: center;
+}
+
+.card-body img {
+    border: none;
+}
+
+.card-img {
+    border: none;
+    padding: 0;
+    margin: 0 auto;
+    height: 25rem;
+    width: 80%;
 }
 
 /* This inserts something after the content of selected elements (in the case the elements with class "Row") */
