@@ -19,7 +19,7 @@ body {
 
 /* This section contributes to the fade effect that occurs once the page has loaded */
 body.fade-out {
-    opacity: .1; /* This sets the level of opacity at the start of page load */
+    opacity: .5; /* This sets the level of opacity at the start of page load */
 }
 
 /* This section is for the container classes, ensureing all the text is centered*/
@@ -31,6 +31,10 @@ body.fade-out {
     background-color: #F6FBF6;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.contact-button {
+    z-index: 100;
 }
 
 .full-row {
@@ -198,7 +202,7 @@ footer {
     position: fixed; /* This keeps the navbar at the top of the screen even when we scrolll */
     top: 0; /* This ensures that there is no space displayed above the navbar */
     width: 100%; /* This makes the navbar span the entre width of the page */
-    z-index: 1; /* Thsi ensures other elements don't display over or on top of the navbar */
+    z-index: 200; /* This ensures other elements don't display over or on top of the navbar */
     -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
     animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
 }
@@ -427,6 +431,10 @@ footer {
     background-color: #F6FBF6;
 }
 
+.Row {
+    z-index: 1;
+}
+
 .card-body p, h1 {
     text-align: center;
 }
@@ -480,7 +488,7 @@ footer {
 
 .form-popup {
     border: 3px solid #F6FBF6; /* Creates a solid light gray border around the contact form */
-    z-index: 8; /* This z-index ensures that the contact form appears above the other contents & elements of the webpage */
+    z-index: 101; /* This z-index ensures that the contact form appears above the other contents & elements of the webpage */
     display: none; /* Sets the display to none, JavaScript will be used to show the contact form */
     position: fixed; /* The form stays int he same position and location no matter what */
     bottom: .5vw;  /* Slightly up from the bottom of the viewport */
