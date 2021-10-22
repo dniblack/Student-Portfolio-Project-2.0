@@ -19,7 +19,7 @@ body {
 
 /* This section contributes to the fade effect that occurs once the page has loaded */
 body.fade-out {
-    opacity: .5; /* This sets the level of opacity at the start of page load */
+    opacity: 1; /* This sets the level of opacity at the start of page load */
 }
 
 /* This section is for the container classes, ensureing all the text is centered*/
@@ -51,6 +51,25 @@ body.fade-out {
     padding: 0;
     margin: 0;
 }
+
+.res {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.resume {
+    margin-left: 200px;
+}
+
+.res img {
+    transition: transform .5s;
+  }
+  
+ .res img:hover {
+    transform: scale(1.5);
+  }
 
 /* Heading Elements */
 h1 {
@@ -202,15 +221,15 @@ footer {
     position: fixed; /* This keeps the navbar at the top of the screen even when we scrolll */
     top: 0; /* This ensures that there is no space displayed above the navbar */
     width: 100%; /* This makes the navbar span the entre width of the page */
-    z-index: 200; /* This ensures other elements don't display over or on top of the navbar */
+    z-index: 100; /* This ensures other elements don't display over or on top of the navbar */
     -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
     animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
 }
 
 /* moveNav aniamtion effect for moving the navbar in from the left of the screen */
 @keyframes moveNav {
-    from {top: -100vw} /* The navbar is starting off screen to the left */
-    to {bottom: 0vw;} /* This movse the navbar into place on the screen */
+    from {left: -100vw} /* The navbar is starting off screen to the left */
+    to {left: 0vw;} /* This movse the navbar into place on the screen */
 }
 
 /* Mavbar links */
@@ -221,12 +240,12 @@ footer {
     padding: .75vw 1vw; /* TThis adds padding around our text */
     text-decoration: none; /* This gets rid of the underines under the text on our navbar */
     font-family: 'Source Sans Pro', Lato, Helvetica, sans-serif; /* This specifies the font famile for the text of the navbar */
-    font-weight: 200;
+    font-weight: 600;
     font-size: 1.5vw; /* This specifies the font size for text on our navbar */
     text-align: center; /* This centers the text within the container */
     position: relative; /* This sets the text relative to tis normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveNavText 4.75s; /* Animation for Safari 4.0 - 8.0 */
-    animation: moveNavText 4.75s; /* Applies the moveNavText animation for 5.75s */
+    -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
+    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */
 }
 
 /* moveNavText animation effect for moving the navbar text from above the view to the navbar */
@@ -294,7 +313,7 @@ footer {
 
 /* SLIDESHOW STYLING */
 #SlideshowBG {
-    background: rgba(0, 0, 0, .55);
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .mySlides {
